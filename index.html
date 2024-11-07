@@ -737,6 +737,7 @@
   <a href="#photography" class="nav-link">Photography</a>
 
 </nav>
+  <!-- End photography Section -->
 
 <!-- Add this JavaScript for smooth scrolling -->
 <script>
@@ -748,10 +749,24 @@
       });
     });
   });
+// JavaScript to trigger fade-in on scroll
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOnScroll = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('appear');
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+faders.forEach(fader => appearOnScroll.observe(fader));
+
+  
 </script>
 
 
-  <!-- End photography Section -->
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
