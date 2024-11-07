@@ -718,6 +718,39 @@
     </div>
   </section>
 
+
+  <!-- Link to the section in HTML -->
+<nav>
+  <a href="#home" class="nav-link">Home</a>
+
+  <a href="#about" class="nav-link">About</a>
+  <a href="#education" class="nav-link">Education</a>
+  <a href="#experience" class="nav-link">Experience</a>
+
+
+  <a href="#projects" class="nav-link">Projects</a>
+  <a href="#skills" class="nav-link">Skills</a>
+  <a href="#resume" class="nav-link">Resume</a>
+
+
+  <a href="#contact" class="nav-link">Contact</a>
+  <a href="#photography" class="nav-link">Photography</a>
+
+</nav>
+
+<!-- Add this JavaScript for smooth scrolling -->
+<script>
+  document.querySelectorAll('a.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+
   <!-- End photography Section -->
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
