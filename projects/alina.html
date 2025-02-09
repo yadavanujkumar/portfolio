@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Will You Be My WiFi?</title>
+  <title>Will You Be My GF?</title>
   <!-- Animate.css for animations -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <style>
@@ -67,16 +67,30 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
-    #page4 ul {
-      list-style: none;
-      padding: 0;
-      text-align: left;
-    }
-
-    #page4 li {
-      margin: 1rem 0;
-      font-size: 1.1rem;
-    }
+    #page4 .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  #page4 ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    flex: 1;
+  }
+  
+  #page4 li {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+  }
+  
+  #page4 img {
+    max-width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  } 
 
     @keyframes fadeIn {
       from { opacity: 0; }
@@ -116,15 +130,16 @@
   <!-- Page 1: Intro -->
   <div class="page active-page" id="page1">
     <h1>Let’s go…<br>You’re probably wondering why this looks like a 90s website. 😂</h1>
-    <button onclick="showPage('page2')">Click here (unless you’re scared)</button>
+    <button onclick="showPage('page2')">Click here (unless you dont want to)</button>
   </div>
 
   <!-- Page 2: Gallery -->
   <div class="page" id="page2">
-    <h1>Exhibit A: Proof I’m Cute Enough to Keep</h1>
+    <h1>Exhibit A: Proof I’m Cute Enough to Keepup</h1>
     <div class="gallery">
-      <img src="your-funny-photo1.jpg" alt="Me trying to cook" class="animate__animated animate__bounce">
-      <img src="your-funny-photo2.jpg" alt="Me falling asleep mid-movie">
+      <img src="assets\img\a1.jpg" class="animate__animated animate__bounce">
+      <img src="assets\img\a2.jpg">
+      <img src="assets\img\a4.jpg">
       <video controls>
         <source src="your-embarrassing-video.mp4" type="video/mp4">
       </video>
@@ -140,14 +155,17 @@
     <p id="answer" style="display: none; margin-top: 2rem;">Surprise! This is a proposal site. (Don’t worry, I didn’t hack your bank account.)</p>
   </div>
 
-  <!-- Page 4: Benefits -->
+    <!-- Page 4: Benefits -->
   <div class="page" id="page4">
     <h1>Reasons to Say Yes</h1>
-    <ul>
-      <li>✅ I’ll blame the dog for your farts</li>
-      <li>✅ Free WiFi name: "ILoveYouMoreThanPizza"</li>
-      <li>✅ 24/7 bad jokes supply (see below)</li>
-    </ul>
+    <div class="content">
+      <ul>
+        <li>✅ I’ll blame the dog for your farts</li>
+        <li>✅ Free WiFi name: "ILoveYouMoreThanPizza"</li>
+        <li>✅ 24/7 bad jokes supply (see below)</li>
+      </ul>
+      <img src="assets\img\a3-removebg-preview.png" alt="Reasons to Say Yes">
+    </div>
     <button onclick="showPage('page5')">Wait, there’s more…</button>
   </div>
 
